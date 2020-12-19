@@ -15,26 +15,34 @@ namespace NSC
         public NSC()
         {
             InitializeComponent();
+
         }
 
         private int dec;
-        private void input_TextChanged(object sender, EventArgs e)
-        {
-            //KeyPressEventArgs 
-            try
-            {
-                dec = Convert.ToInt32(input.Text);
-            }
-            catch (Exception except)
-            {
-                MessageBox.Show(except.Message);
-            }
-            binary.Text = Convert.ToString(dec, 2);
-            octal.Text = Convert.ToString(dec, 8);
-            hexadecimal.Text = Convert.ToString(dec, 16);
-        }
 
-        
+        private void input_EnterClicked(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.error.Text = null;
+                try
+                {
+                    dec = Convert.ToInt32(input.Text);
+                    binary.Text = Convert.ToString(dec, 2);
+                    octal.Text = Convert.ToString(dec, 8);
+                    hexadecimal.Text = Convert.ToString(dec, 16);
+                }
+                catch (Exception)
+                {
+                    error.Visible = true;
+                    error.Text = "Your input contains \ninapropriate symbols...";
+                    binary.Text = "Error";
+                    octal.Text = "Error";
+                    hexadecimal.Text = "Error";
+                }
+                
+            }
+        }
         private void exitButtonClicked(object sender, EventArgs e)
         {
             Application.Exit();
