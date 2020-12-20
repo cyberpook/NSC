@@ -22,7 +22,7 @@ namespace NSC
         private int choose;
         private void input_TextChanged(object sender, EventArgs e)
         {
-            this.error.Text = null;
+           this.error.Text = null;
             if (choose == 10)
             {
                 try
@@ -39,13 +39,13 @@ namespace NSC
                 catch (Exception)
                 {
                     error.Visible = true;
-                    error.Text = "Your input contains \ninapropriate symbols\nor too much characters...";
+                    error.Text = "Your input contains \ninapropriate symbols...";
                     binary.Text = "Error";
                     octal.Text = "Error";
                     hexadecimal.Text = "Error";
                 }
-            }
-            else if (choose == 2)
+            } 
+            else if(choose == 2)
             {
                 binLabel.Text = "Decimal form";
                 octLabel.Text = "Octal form";
@@ -61,7 +61,7 @@ namespace NSC
                 catch (Exception)
                 {
                     error.Visible = true;
-                    error.Text = "Your input contains \ninapropriate symbols\nor too much characters...";
+                    error.Text = "Your input contains \ninapropriate symbols...";
                     binary.Text = "Error";
                     octal.Text = "Error";
                     hexadecimal.Text = "Error";
@@ -83,7 +83,7 @@ namespace NSC
                 catch (Exception)
                 {
                     error.Visible = true;
-                    error.Text = "Your input contains \ninapropriate symbols\nor too much characters...";
+                    error.Text = "Your input contains \ninapropriate symbols...";
                     binary.Text = "Error";
                     octal.Text = "Error";
                     hexadecimal.Text = "Error";
@@ -104,7 +104,7 @@ namespace NSC
                 catch (Exception)
                 {
                     error.Visible = true;
-                    error.Text = "Your input contains \ninapropriate symbols\nor too much characters...";
+                    error.Text = "Your input contains \ninapropriate symbols...";
                     binary.Text = "Error";
                     octal.Text = "Error";
                     hexadecimal.Text = "Error";
@@ -154,8 +154,7 @@ namespace NSC
         }
         private void About_Click(object sender, EventArgs e)
         {
-            AboutUsForm AUF = new AboutUsForm();
-            AUF.Show();
+            Application.Run(new AboutUsForm());
         }
     }
 }
