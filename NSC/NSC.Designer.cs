@@ -43,7 +43,7 @@ namespace NSC
             this.ExitButton = new System.Windows.Forms.Button();
             this.error = new System.Windows.Forms.Label();
             this.SystemSelect = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ConverFrom = new System.Windows.Forms.Label();
             this.About = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -138,6 +138,8 @@ namespace NSC
             // 
             // SystemSelect
             // 
+            this.SystemSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SystemSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SystemSelect.FormattingEnabled = true;
             this.SystemSelect.Items.AddRange(new object[] {
             "Binary",
@@ -148,17 +150,16 @@ namespace NSC
             this.SystemSelect.Name = "SystemSelect";
             this.SystemSelect.Size = new System.Drawing.Size(155, 21);
             this.SystemSelect.TabIndex = 10;
-            this.SystemSelect.Text = "Choose number system";
             this.SystemSelect.SelectedIndexChanged += new System.EventHandler(this.SystemSelect_SelectedIndexChanged);
             // 
-            // label1
+            // ConverFrom
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Convert from:";
+            this.ConverFrom.AutoSize = true;
+            this.ConverFrom.Location = new System.Drawing.Point(12, 48);
+            this.ConverFrom.Name = "ConverFrom";
+            this.ConverFrom.Size = new System.Drawing.Size(70, 13);
+            this.ConverFrom.TabIndex = 11;
+            this.ConverFrom.Text = "Convert from:";
             // 
             // About
             // 
@@ -176,7 +177,7 @@ namespace NSC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 250);
             this.Controls.Add(this.About);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ConverFrom);
             this.Controls.Add(this.SystemSelect);
             this.Controls.Add(this.error);
             this.Controls.Add(this.ExitButton);
@@ -213,7 +214,7 @@ namespace NSC
         private Button ExitButton;
         private Label error;
         private ComboBox SystemSelect;
-        private Label label1;
+        private Label ConverFrom;
         private Button About;
     }
 }

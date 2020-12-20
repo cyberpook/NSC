@@ -30,22 +30,36 @@ namespace NSC
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutUsForm));
+            this.instaMykha = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // instaMykha
+            // 
+            this.instaMykha.Location = new System.Drawing.Point(301, 148);
+            this.instaMykha.Name = "instaMykha";
+            this.instaMykha.Size = new System.Drawing.Size(100, 100);
+            this.instaMykha.TabIndex = 0;
+            this.instaMykha.Text = "Mykhailo\'s instagram";
+            this.instaMykha.UseVisualStyleBackColor = true;
+            this.instaMykha.Click += new System.EventHandler(this.instaMykha_Click);
             // 
             // AboutUsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 250);
+            this.Controls.Add(this.instaMykha);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(516, 289);
             this.MinimumSize = new System.Drawing.Size(516, 289);
             this.Name = "AboutUsForm";
-            this.Text = "Form1";
+            this.Text = "About Us";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button instaMykha;
     }
 }

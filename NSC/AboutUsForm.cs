@@ -17,5 +17,9 @@ namespace NSC
             InitializeComponent();
         }
 
+        private void instaMykha_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
