@@ -31,6 +31,7 @@ namespace NSC
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NSC));
             this.input = new System.Windows.Forms.TextBox();
             this.inputAsking = new System.Windows.Forms.Label();
             this.binary = new System.Windows.Forms.TextBox();
@@ -40,6 +41,10 @@ namespace NSC
             this.hexadecimal = new System.Windows.Forms.TextBox();
             this.hexadec = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.error = new System.Windows.Forms.Label();
+            this.SystemSelect = new System.Windows.Forms.ComboBox();
+            this.ConverFrom = new System.Windows.Forms.Label();
+            this.About = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // input
@@ -56,16 +61,15 @@ namespace NSC
             this.inputAsking.AutoSize = true;
             this.inputAsking.Location = new System.Drawing.Point(12, 116);
             this.inputAsking.Name = "inputAsking";
-            this.inputAsking.Size = new System.Drawing.Size(109, 13);
+            this.inputAsking.Size = new System.Drawing.Size(0, 13);
             this.inputAsking.TabIndex = 1;
-            this.inputAsking.Text = "Enter decimal number";
             // 
             // binary
             // 
             this.binary.Location = new System.Drawing.Point(218, 65);
             this.binary.Name = "binary";
             this.binary.ReadOnly = true;
-            this.binary.Size = new System.Drawing.Size(182, 20);
+            this.binary.Size = new System.Drawing.Size(230, 20);
             this.binary.TabIndex = 2;
             // 
             // octal
@@ -73,7 +77,7 @@ namespace NSC
             this.octal.Location = new System.Drawing.Point(218, 132);
             this.octal.Name = "octal";
             this.octal.ReadOnly = true;
-            this.octal.Size = new System.Drawing.Size(182, 20);
+            this.octal.Size = new System.Drawing.Size(230, 20);
             this.octal.TabIndex = 3;
             // 
             // binLabel
@@ -99,7 +103,7 @@ namespace NSC
             this.hexadecimal.Location = new System.Drawing.Point(218, 196);
             this.hexadecimal.Name = "hexadecimal";
             this.hexadecimal.ReadOnly = true;
-            this.hexadecimal.Size = new System.Drawing.Size(182, 20);
+            this.hexadecimal.Size = new System.Drawing.Size(230, 20);
             this.hexadecimal.TabIndex = 6;
             // 
             // hexadec
@@ -111,7 +115,7 @@ namespace NSC
             this.hexadec.TabIndex = 7;
             this.hexadec.Text = "Hexadecimal form: ";
             // 
-            // button1
+            // ExitButton
             // 
             this.ExitButton.Location = new System.Drawing.Point(-1, 229);
             this.ExitButton.Name = "ExitButton";
@@ -121,11 +125,61 @@ namespace NSC
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.exitButtonClicked);
             // 
+            // error
+            // 
+            this.error.AutoSize = true;
+            this.error.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.error.ForeColor = System.Drawing.Color.Red;
+            this.error.Location = new System.Drawing.Point(12, 164);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(0, 17);
+            this.error.TabIndex = 9;
+            this.error.Visible = false;
+            // 
+            // SystemSelect
+            // 
+            this.SystemSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SystemSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SystemSelect.FormattingEnabled = true;
+            this.SystemSelect.Items.AddRange(new object[] {
+            "Binary",
+            "Octal",
+            "Decimal",
+            "Hexadecimal"});
+            this.SystemSelect.Location = new System.Drawing.Point(12, 64);
+            this.SystemSelect.Name = "SystemSelect";
+            this.SystemSelect.Size = new System.Drawing.Size(155, 21);
+            this.SystemSelect.TabIndex = 10;
+            this.SystemSelect.SelectedIndexChanged += new System.EventHandler(this.SystemSelect_SelectedIndexChanged);
+            // 
+            // ConverFrom
+            // 
+            this.ConverFrom.AutoSize = true;
+            this.ConverFrom.Location = new System.Drawing.Point(12, 48);
+            this.ConverFrom.Name = "ConverFrom";
+            this.ConverFrom.Size = new System.Drawing.Size(70, 13);
+            this.ConverFrom.TabIndex = 11;
+            this.ConverFrom.Text = "Convert from:";
+            // 
+            // About
+            // 
+            this.About.Location = new System.Drawing.Point(425, 0);
+            this.About.Name = "About";
+            this.About.Size = new System.Drawing.Size(75, 23);
+            this.About.TabIndex = 12;
+            this.About.Text = "About us";
+            this.About.UseVisualStyleBackColor = true;
+            this.About.Click += new System.EventHandler(this.About_Click);
+            // 
             // NSC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 250);
+            this.Controls.Add(this.About);
+            this.Controls.Add(this.ConverFrom);
+            this.Controls.Add(this.SystemSelect);
+            this.Controls.Add(this.error);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.hexadec);
             this.Controls.Add(this.hexadecimal);
@@ -135,6 +189,11 @@ namespace NSC
             this.Controls.Add(this.binary);
             this.Controls.Add(this.inputAsking);
             this.Controls.Add(this.input);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(516, 289);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(516, 289);
             this.Name = "NSC";
             this.Text = "NSC";
             this.ResumeLayout(false);
@@ -153,6 +212,10 @@ namespace NSC
         private TextBox hexadecimal;
         private Label hexadec;
         private Button ExitButton;
+        private Label error;
+        private ComboBox SystemSelect;
+        private Label ConverFrom;
+        private Button About;
     }
 }
 
