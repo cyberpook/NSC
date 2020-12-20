@@ -39,7 +39,7 @@ namespace NSC
                 catch (Exception)
                 {
                     error.Visible = true;
-                    error.Text = "Your input contains \ninapropriate symbols or too much characters...";
+                    error.Text = "Your input contains \ninapropriate symbols\nor too much characters...";
                     binary.Text = "Error";
                     octal.Text = "Error";
                     hexadecimal.Text = "Error";
@@ -61,7 +61,7 @@ namespace NSC
                 catch (Exception)
                 {
                     error.Visible = true;
-                    error.Text = "Your input contains \ninapropriate symbols or too much characters...";
+                    error.Text = "Your input contains \ninapropriate symbols\nor too much characters...";
                     binary.Text = "Error";
                     octal.Text = "Error";
                     hexadecimal.Text = "Error";
@@ -83,7 +83,7 @@ namespace NSC
                 catch (Exception)
                 {
                     error.Visible = true;
-                    error.Text = "Your input contains \ninapropriate symbols or too much characters...";
+                    error.Text = "Your input contains \ninapropriate symbols\nor too much characters...";
                     binary.Text = "Error";
                     octal.Text = "Error";
                     hexadecimal.Text = "Error";
@@ -104,7 +104,7 @@ namespace NSC
                 catch (Exception)
                 {
                     error.Visible = true;
-                    error.Text = "Your input contains \ninapropriate symbols or too much characters...";
+                    error.Text = "Your input contains \ninapropriate symbols\nor too much characters...";
                     binary.Text = "Error";
                     octal.Text = "Error";
                     hexadecimal.Text = "Error";

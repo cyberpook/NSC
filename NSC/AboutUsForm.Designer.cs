@@ -33,8 +33,11 @@ namespace NSC
             this.instaMykha = new System.Windows.Forms.Button();
             this.instaMaksym = new System.Windows.Forms.Button();
             this.GitHub = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.follow_info = new System.Windows.Forms.Label();
             this.InstaYuriy = new System.Windows.Forms.Button();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.about = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // instaMykha
@@ -68,15 +71,15 @@ namespace NSC
             this.GitHub.UseVisualStyleBackColor = true;
             this.GitHub.Click += new System.EventHandler(this.GitHub_Click);
             // 
-            // label1
+            // follow_info
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(358, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Follow us on our GitHub\nand Instagram accounts.";
+            this.follow_info.AutoSize = true;
+            this.follow_info.Font = new System.Drawing.Font("Yu Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.follow_info.Location = new System.Drawing.Point(343, 169);
+            this.follow_info.Name = "follow_info";
+            this.follow_info.Size = new System.Drawing.Size(130, 28);
+            this.follow_info.TabIndex = 3;
+            this.follow_info.Text = "Follow us on our GitHub\nand Instagram accounts.";
             // 
             // InstaYuriy
             // 
@@ -88,13 +91,35 @@ namespace NSC
             this.InstaYuriy.UseVisualStyleBackColor = true;
             this.InstaYuriy.Click += new System.EventHandler(this.InstaYuriy_Click);
             // 
+            // logo
+            // 
+            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
+            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logo.Location = new System.Drawing.Point(2, 2);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(245, 245);
+            this.logo.TabIndex = 5;
+            this.logo.TabStop = false;
+            // 
+            // about
+            // 
+            this.about.AutoSize = true;
+            this.about.Location = new System.Drawing.Point(254, 9);
+            this.about.Name = "about";
+            this.about.Size = new System.Drawing.Size(201, 65);
+            this.about.TabIndex = 6;
+            this.about.Text = "© 2020 Copyright CYBERPOOK\nDevelopers:\nVovkanych Mykhailo and Pavliv Maksym\nDesig" +
+    "ner:\nYuri Vovkanych\n";
+            // 
             // AboutUsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 250);
+            this.Controls.Add(this.about);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.InstaYuriy);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.follow_info);
             this.Controls.Add(this.GitHub);
             this.Controls.Add(this.instaMaksym);
             this.Controls.Add(this.instaMykha);
@@ -103,6 +128,7 @@ namespace NSC
             this.MinimumSize = new System.Drawing.Size(516, 289);
             this.Name = "AboutUsForm";
             this.Text = "About Us";
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,7 +139,9 @@ namespace NSC
         private System.Windows.Forms.Button instaMykha;
         private System.Windows.Forms.Button instaMaksym;
         private System.Windows.Forms.Button GitHub;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label follow_info;
         private System.Windows.Forms.Button InstaYuriy;
+        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Label about;
     }
 }
