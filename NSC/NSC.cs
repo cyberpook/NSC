@@ -18,8 +18,8 @@ namespace NSC
 
         }
 
-        private int dec;
-
+        private int number;
+        private int choose;
         private void input_EnterClicked(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -27,10 +27,10 @@ namespace NSC
                 this.error.Text = null;
                 try
                 {
-                    dec = Convert.ToInt32(input.Text);
-                    binary.Text = Convert.ToString(dec, 2);
-                    octal.Text = Convert.ToString(dec, 8);
-                    hexadecimal.Text = Convert.ToString(dec, 16);
+                    number = Convert.ToInt32(input.Text);
+                    binary.Text = Convert.ToString(number, 2);
+                    octal.Text = Convert.ToString(number, 8);
+                    hexadecimal.Text = Convert.ToString(number, 16);
                 }
                 catch (Exception)
                 {
@@ -46,6 +46,31 @@ namespace NSC
         private void exitButtonClicked(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void SystemSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedIndex = SystemSelect.SelectedIndex;
+            if(selectedIndex == 0)
+            {
+                this.inputAsking.Text = "Enter binary number";
+                choose = 2;
+            }
+            if (selectedIndex == 1)
+            {
+                this.inputAsking.Text = "Enter octal number";
+                choose = 8;
+            }
+            if (selectedIndex == 2)
+            {
+                this.inputAsking.Text = "Enter decimal number";
+                choose = 10;
+            }
+            if (selectedIndex == 3)
+            {
+                this.inputAsking.Text = "Enter hexadecimal number";
+                choose = 16;
+            }
         }
     }
 }

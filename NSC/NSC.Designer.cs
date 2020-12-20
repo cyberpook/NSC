@@ -41,6 +41,8 @@ namespace NSC
             this.hexadec = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.error = new System.Windows.Forms.Label();
+            this.SystemSelect = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // input
@@ -57,9 +59,8 @@ namespace NSC
             this.inputAsking.AutoSize = true;
             this.inputAsking.Location = new System.Drawing.Point(12, 116);
             this.inputAsking.Name = "inputAsking";
-            this.inputAsking.Size = new System.Drawing.Size(109, 13);
+            this.inputAsking.Size = new System.Drawing.Size(0, 13);
             this.inputAsking.TabIndex = 1;
-            this.inputAsking.Text = "Enter decimal number";
             // 
             // binary
             // 
@@ -129,16 +130,41 @@ namespace NSC
             this.error.ForeColor = System.Drawing.Color.Red;
             this.error.Location = new System.Drawing.Point(12, 164);
             this.error.Name = "error";
-            this.error.Size = new System.Drawing.Size(57, 17);
+            this.error.Size = new System.Drawing.Size(0, 17);
             this.error.TabIndex = 9;
-            this.error.Text = null;
             this.error.Visible = false;
+            // 
+            // SystemSelect
+            // 
+            this.SystemSelect.FormattingEnabled = true;
+            this.SystemSelect.Items.AddRange(new object[] {
+            "Binary",
+            "Octal",
+            "Decimal",
+            "Hexadecimal"});
+            this.SystemSelect.Location = new System.Drawing.Point(12, 64);
+            this.SystemSelect.Name = "SystemSelect";
+            this.SystemSelect.Size = new System.Drawing.Size(155, 21);
+            this.SystemSelect.TabIndex = 10;
+            this.SystemSelect.Text = "Choose number system";
+            this.SystemSelect.SelectedIndexChanged += new System.EventHandler(this.SystemSelect_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Convert from:";
             // 
             // NSC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 250);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SystemSelect);
             this.Controls.Add(this.error);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.hexadec);
@@ -172,6 +198,8 @@ namespace NSC
         private Label hexadec;
         private Button ExitButton;
         private Label error;
+        private ComboBox SystemSelect;
+        private Label label1;
     }
 }
 
