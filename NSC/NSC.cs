@@ -154,7 +154,8 @@ namespace NSC
         }
         private void About_Click(object sender, EventArgs e)
         {
-            Application.Run(new AboutUsForm());
+            AboutUsForm AUF = new AboutUsForm();
+            AUF.Show();
         }
     }
 }
