@@ -31,6 +31,7 @@ namespace NSC
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NSC));
             this.input = new System.Windows.Forms.TextBox();
             this.inputAsking = new System.Windows.Forms.Label();
             this.binary = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@ namespace NSC
             this.error = new System.Windows.Forms.Label();
             this.SystemSelect = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.About = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // input
@@ -52,7 +54,7 @@ namespace NSC
             this.input.Name = "input";
             this.input.Size = new System.Drawing.Size(155, 20);
             this.input.TabIndex = 0;
-            this.input.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.input_EnterClicked);
+            this.input.TextChanged += new System.EventHandler(this.input_TextChanged);
             // 
             // inputAsking
             // 
@@ -158,11 +160,22 @@ namespace NSC
             this.label1.TabIndex = 11;
             this.label1.Text = "Convert from:";
             // 
+            // About
+            // 
+            this.About.Location = new System.Drawing.Point(425, 0);
+            this.About.Name = "About";
+            this.About.Size = new System.Drawing.Size(75, 23);
+            this.About.TabIndex = 12;
+            this.About.Text = "About us";
+            this.About.UseVisualStyleBackColor = true;
+            this.About.Click += new System.EventHandler(this.About_Click);
+            // 
             // NSC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 250);
+            this.Controls.Add(this.About);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SystemSelect);
             this.Controls.Add(this.error);
@@ -175,6 +188,7 @@ namespace NSC
             this.Controls.Add(this.binary);
             this.Controls.Add(this.inputAsking);
             this.Controls.Add(this.input);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(516, 289);
             this.MinimizeBox = false;
@@ -200,6 +214,7 @@ namespace NSC
         private Label error;
         private ComboBox SystemSelect;
         private Label label1;
+        private Button About;
     }
 }
 
