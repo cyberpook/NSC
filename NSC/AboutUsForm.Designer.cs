@@ -34,6 +34,7 @@ namespace NSC
             this.instaMaksym = new System.Windows.Forms.Button();
             this.GitHub = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.InstaYuriy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // instaMykha
@@ -60,7 +61,7 @@ namespace NSC
             // 
             this.GitHub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.GitHub.Image = ((System.Drawing.Image)(resources.GetObject("GitHub.Image")));
-            this.GitHub.Location = new System.Drawing.Point(358, 200);
+            this.GitHub.Location = new System.Drawing.Point(315, 200);
             this.GitHub.Name = "GitHub";
             this.GitHub.Size = new System.Drawing.Size(50, 50);
             this.GitHub.TabIndex = 2;
@@ -77,11 +78,22 @@ namespace NSC
             this.label1.TabIndex = 3;
             this.label1.Text = "Follow us on our GitHub\nand Instagram accounts.";
             // 
+            // InstaYuriy
+            // 
+            this.InstaYuriy.Image = ((System.Drawing.Image)(resources.GetObject("InstaYuriy.Image")));
+            this.InstaYuriy.Location = new System.Drawing.Point(361, 200);
+            this.InstaYuriy.Name = "InstaYuriy";
+            this.InstaYuriy.Size = new System.Drawing.Size(50, 50);
+            this.InstaYuriy.TabIndex = 4;
+            this.InstaYuriy.UseVisualStyleBackColor = true;
+            this.InstaYuriy.Click += new System.EventHandler(this.InstaYuriy_Click);
+            // 
             // AboutUsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 250);
+            this.Controls.Add(this.InstaYuriy);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GitHub);
             this.Controls.Add(this.instaMaksym);
@@ -102,5 +114,6 @@ namespace NSC
         private System.Windows.Forms.Button instaMaksym;
         private System.Windows.Forms.Button GitHub;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button InstaYuriy;
     }
 }

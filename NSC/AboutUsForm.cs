@@ -31,5 +31,10 @@ namespace NSC
         {
             System.Diagnostics.Process.Start("https://github.com/cyberpook");
         }
+
+        private void InstaYuriy_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/yuri.vovkanych/");
+        }
     }
 }
