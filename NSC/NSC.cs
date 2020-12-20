@@ -22,18 +22,66 @@ namespace NSC
         private int choose;
         private void input_TextChanged(object sender, EventArgs e)
         {
-            this.error.Text = null;
+           this.error.Text = null;
             if (choose == 10)
-            {                   
+            {
                 try
                 {
-                    number = Convert.ToInt32(input.Text, 10);
+                    binLabel.Text = "Binary form";
+                    octLabel.Text = "Octal form";
+                    hexadec.Text = "Hexadecimal form";
+
+                    number = Convert.ToInt32(input.Text);
                     binary.Text = Convert.ToString(number, 2);
                     octal.Text = Convert.ToString(number, 8);
                     hexadecimal.Text = Convert.ToString(number, 16);
                 }
                 catch (Exception)
-                {                  
+                {
+                    error.Visible = true;
+                    error.Text = "Your input contains \ninapropriate symbols...";
+                    binary.Text = "Error";
+                    octal.Text = "Error";
+                    hexadecimal.Text = "Error";
+                }
+            } 
+            else if(choose == 2)
+            {
+                binLabel.Text = "Decimal form";
+                octLabel.Text = "Octal form";
+                hexadec.Text = "Hexadecimal form";
+
+                try
+                {
+                    number = Convert.ToInt32(input.Text, 2);
+                    binary.Text = Convert.ToString(number, 10);
+                    octal.Text = Convert.ToString(number, 8);
+                    hexadecimal.Text = Convert.ToString(number, 16);
+                }
+                catch (Exception)
+                {
+                    error.Visible = true;
+                    error.Text = "Your input contains \ninapropriate symbols...";
+                    binary.Text = "Error";
+                    octal.Text = "Error";
+                    hexadecimal.Text = "Error";
+                }
+            }
+            else if (choose == 8)
+            {
+                binLabel.Text = "Binary form";
+                octLabel.Text = "Decimal form";
+                hexadec.Text = "Hexadecimal form";
+
+                try
+                {
+                    number = Convert.ToInt32(input.Text, 8);
+                    binary.Text = Convert.ToString(number, 2);
+                    octal.Text = Convert.ToString(number, 10);
+                    hexadecimal.Text = Convert.ToString(number, 16);
+                }
+                catch (Exception)
+                {
                     error.Visible = true;
                     error.Text = "Your input contains \ninapropriate symbols...";
                     binary.Text = "Error";
@@ -43,8 +91,11 @@ namespace NSC
             }
             else
             {
+                binLabel.Text = "Binary form";
+                octLabel.Text = "Octal form";
+                hexadec.Text = "Decimal form";
                 try
-                {                   
+                {
                     number = Convert.ToInt32(input.Text, 16);
                     binary.Text = Convert.ToString(number, 2);
                     octal.Text = Convert.ToString(number, 8);
@@ -52,7 +103,6 @@ namespace NSC
                 }
                 catch (Exception)
                 {
-
                     error.Visible = true;
                     error.Text = "Your input contains \ninapropriate symbols...";
                     binary.Text = "Error";
@@ -60,7 +110,6 @@ namespace NSC
                     hexadecimal.Text = "Error";
                 }
             }
-            
         }
         private void exitButtonClicked(object sender, EventArgs e)
         {
