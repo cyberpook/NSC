@@ -59,9 +59,11 @@ namespace NSC
             // inputAsking
             // 
             this.inputAsking.AutoSize = true;
+            this.inputAsking.BackColor = System.Drawing.Color.Transparent;
+            this.inputAsking.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.inputAsking.Location = new System.Drawing.Point(12, 116);
             this.inputAsking.Name = "inputAsking";
-            this.inputAsking.Size = new System.Drawing.Size(0, 13);
+            this.inputAsking.Size = new System.Drawing.Size(0, 15);
             this.inputAsking.TabIndex = 1;
             // 
             // binary
@@ -83,18 +85,22 @@ namespace NSC
             // binLabel
             // 
             this.binLabel.AutoSize = true;
+            this.binLabel.BackColor = System.Drawing.Color.Transparent;
+            this.binLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.binLabel.Location = new System.Drawing.Point(215, 49);
             this.binLabel.Name = "binLabel";
-            this.binLabel.Size = new System.Drawing.Size(65, 13);
+            this.binLabel.Size = new System.Drawing.Size(88, 15);
             this.binLabel.TabIndex = 4;
             this.binLabel.Text = "Binary form: ";
             // 
             // octLabel
             // 
             this.octLabel.AutoSize = true;
+            this.octLabel.BackColor = System.Drawing.Color.Transparent;
+            this.octLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.octLabel.Location = new System.Drawing.Point(215, 116);
             this.octLabel.Name = "octLabel";
-            this.octLabel.Size = new System.Drawing.Size(61, 13);
+            this.octLabel.Size = new System.Drawing.Size(81, 15);
             this.octLabel.TabIndex = 5;
             this.octLabel.Text = "Octal form: ";
             // 
@@ -109,9 +115,11 @@ namespace NSC
             // hexadec
             // 
             this.hexadec.AutoSize = true;
-            this.hexadec.Location = new System.Drawing.Point(215, 180);
+            this.hexadec.BackColor = System.Drawing.Color.Transparent;
+            this.hexadec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hexadec.Location = new System.Drawing.Point(215, 178);
             this.hexadec.Name = "hexadec";
-            this.hexadec.Size = new System.Drawing.Size(97, 13);
+            this.hexadec.Size = new System.Drawing.Size(132, 15);
             this.hexadec.TabIndex = 7;
             this.hexadec.Text = "Hexadecimal form: ";
             // 
@@ -128,6 +136,7 @@ namespace NSC
             // error
             // 
             this.error.AutoSize = true;
+            this.error.BackColor = System.Drawing.Color.Transparent;
             this.error.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.error.ForeColor = System.Drawing.Color.Red;
             this.error.Location = new System.Drawing.Point(12, 164);
@@ -155,9 +164,11 @@ namespace NSC
             // ConverFrom
             // 
             this.ConverFrom.AutoSize = true;
-            this.ConverFrom.Location = new System.Drawing.Point(12, 48);
+            this.ConverFrom.BackColor = System.Drawing.Color.Transparent;
+            this.ConverFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ConverFrom.Location = new System.Drawing.Point(12, 49);
             this.ConverFrom.Name = "ConverFrom";
-            this.ConverFrom.Size = new System.Drawing.Size(70, 13);
+            this.ConverFrom.Size = new System.Drawing.Size(92, 15);
             this.ConverFrom.TabIndex = 11;
             this.ConverFrom.Text = "Convert from:";
             // 
@@ -175,6 +186,7 @@ namespace NSC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(500, 250);
             this.Controls.Add(this.About);
             this.Controls.Add(this.ConverFrom);

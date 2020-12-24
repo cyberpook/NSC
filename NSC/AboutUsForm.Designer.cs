@@ -43,7 +43,7 @@ namespace NSC
             // instaMykha
             // 
             this.instaMykha.Image = ((System.Drawing.Image)(resources.GetObject("instaMykha.Image")));
-            this.instaMykha.Location = new System.Drawing.Point(405, 200);
+            this.instaMykha.Location = new System.Drawing.Point(352, 200);
             this.instaMykha.Name = "instaMykha";
             this.instaMykha.Size = new System.Drawing.Size(50, 50);
             this.instaMykha.TabIndex = 0;
@@ -53,7 +53,7 @@ namespace NSC
             // instaMaksym
             // 
             this.instaMaksym.Image = ((System.Drawing.Image)(resources.GetObject("instaMaksym.Image")));
-            this.instaMaksym.Location = new System.Drawing.Point(451, 200);
+            this.instaMaksym.Location = new System.Drawing.Point(447, 200);
             this.instaMaksym.Name = "instaMaksym";
             this.instaMaksym.Size = new System.Drawing.Size(50, 50);
             this.instaMaksym.TabIndex = 1;
@@ -62,29 +62,32 @@ namespace NSC
             // 
             // GitHub
             // 
+            this.GitHub.BackColor = System.Drawing.Color.Transparent;
             this.GitHub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GitHub.ForeColor = System.Drawing.Color.Transparent;
             this.GitHub.Image = ((System.Drawing.Image)(resources.GetObject("GitHub.Image")));
-            this.GitHub.Location = new System.Drawing.Point(315, 200);
+            this.GitHub.Location = new System.Drawing.Point(304, 200);
             this.GitHub.Name = "GitHub";
             this.GitHub.Size = new System.Drawing.Size(50, 50);
             this.GitHub.TabIndex = 2;
-            this.GitHub.UseVisualStyleBackColor = true;
+            this.GitHub.UseVisualStyleBackColor = false;
             this.GitHub.Click += new System.EventHandler(this.GitHub_Click);
             // 
             // follow_info
             // 
             this.follow_info.AutoSize = true;
-            this.follow_info.Font = new System.Drawing.Font("Yu Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.follow_info.Location = new System.Drawing.Point(343, 169);
+            this.follow_info.BackColor = System.Drawing.Color.Transparent;
+            this.follow_info.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.follow_info.Location = new System.Drawing.Point(327, 171);
             this.follow_info.Name = "follow_info";
-            this.follow_info.Size = new System.Drawing.Size(130, 28);
+            this.follow_info.Size = new System.Drawing.Size(148, 26);
             this.follow_info.TabIndex = 3;
             this.follow_info.Text = "Follow us on our GitHub\nand Instagram accounts.";
             // 
             // InstaYuriy
             // 
             this.InstaYuriy.Image = ((System.Drawing.Image)(resources.GetObject("InstaYuriy.Image")));
-            this.InstaYuriy.Location = new System.Drawing.Point(361, 200);
+            this.InstaYuriy.Location = new System.Drawing.Point(400, 200);
             this.InstaYuriy.Name = "InstaYuriy";
             this.InstaYuriy.Size = new System.Drawing.Size(50, 50);
             this.InstaYuriy.TabIndex = 4;
@@ -104,17 +107,20 @@ namespace NSC
             // about
             // 
             this.about.AutoSize = true;
+            this.about.BackColor = System.Drawing.Color.Transparent;
+            this.about.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.about.Location = new System.Drawing.Point(254, 9);
             this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(201, 65);
+            this.about.Size = new System.Drawing.Size(196, 84);
             this.about.TabIndex = 6;
-            this.about.Text = "© 2020 Copyright CYBERPOOK\nDevelopers:\nVovkanych Mykhailo and Pavliv Maksym\nDesig" +
-    "ner:\nYuri Vovkanych\n";
+            this.about.Text = "© 2020 Copyright CYBERPOOK\nDevelopers:\nVovkanych Mykhailo\nPavliv Maksym\nDesigner:" +
+    "\nYuri Vovkanych\n";
             // 
             // AboutUsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(500, 250);
             this.Controls.Add(this.about);
             this.Controls.Add(this.logo);
